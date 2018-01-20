@@ -1,0 +1,28 @@
+{
+    "dependencies": [
+    ],
+    "license": {
+        "file": "LICENSE",
+        "name": "BSD_3_CLAUSE"
+    },
+    "prcFile": "",
+    "priFile": "cryptoqq.pri",
+    "priIncludes": [
+    ],
+    "publishers": {
+        "qpm": {
+            "author": {
+                "email": "skycoder42.de@gmx.de",
+                "name": "Skycoder"
+            },
+            "description": "Qt-Extensions to the CryptoPP library",
+            "name": "de.skycoder42.cryptoqq",
+            "repository": {
+                "type": "GITHUB",
+                "url": "https://github.com/Skycoder42/CryptoQQ.git"
+            },
+            "webpage": "https://github.com/Skycoder42/CryptoQQ"
+        }
+    },
+    "source": true
+}
