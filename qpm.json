@@ -1,0 +1,22 @@
+{
+    "author": {
+        "email": "skycoder42.de@gmx.de",
+        "name": "Skycoder"
+    },
+    "dependencies": [
+    ],
+    "description": "Qt-Extensions to the CryptoPP library",
+    "license": "BSD_3_CLAUSE",
+    "name": "de.skycoder42.cryptoqq",
+    "pri_filename": "cryptoqq.pri",
+    "repository": {
+        "type": "GITHUB",
+        "url": "https://github.com/Skycoder42/CryptoQQ.git"
+    },
+    "version": {
+        "fingerprint": "",
+        "label": "1.0.0",
+        "revision": ""
+    },
+    "webpage": "https://github.com/Skycoder42/CryptoQQ"
+}
