@@ -9,6 +9,10 @@
 class QIODeviceStore : public CryptoPP::Store, private CryptoPP::FilterPutSpaceHelper, public CryptoPP::NotCopyable
 {
 public:
+#if CRYPTOPP_VERSION >= 600
+	using byte = CryptoPP::byte;
+#endif
+
 	static const char * const DeviceParameter;
 
 	class Err : public CryptoPP::Exception

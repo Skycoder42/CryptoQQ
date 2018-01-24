@@ -9,6 +9,10 @@
 class QIODeviceSink : public CryptoPP::Sink, public CryptoPP::NotCopyable
 {
 public:
+#if CRYPTOPP_VERSION >= 600
+	using byte = CryptoPP::byte;
+#endif
+
 	class Err : public CryptoPP::Exception
 	{
 	public:
