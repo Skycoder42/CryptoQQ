@@ -1,10 +1,11 @@
 #ifndef QIODEVICESINK_H
 #define QIODEVICESINK_H
 
-#include <cryptopp/filters.h>
 #include <QIODevice>
 #include <QByteArray>
 #include <QBuffer>
+
+#include <cryptopp/filters.h>
 
 class QIODeviceSink : public CryptoPP::Sink, public CryptoPP::NotCopyable
 {

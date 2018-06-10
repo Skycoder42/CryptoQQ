@@ -1,10 +1,11 @@
 #ifndef QIODEVICESOURCE_H
 #define QIODEVICESOURCE_H
 
-#include <cryptopp/filters.h>
 #include <QIODevice>
 #include <QByteArray>
 #include <QBuffer>
+
+#include <cryptopp/filters.h>
 
 class QIODeviceStore : public CryptoPP::Store, private CryptoPP::FilterPutSpaceHelper, public CryptoPP::NotCopyable
 {
