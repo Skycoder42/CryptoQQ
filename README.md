@@ -13,7 +13,14 @@ Currently provides the following special classes:
 project that uses CryptoQQ. Because of that reason, this package is only available as qpmx source package and not as compiled one.
 
 ## Installation
-The package is providet as qpm package, [`de.skycoder42.cryptoqq`](https://www.qpm.io/packages/de.skycoder42.cryptoqq/index.html). To install it, use one of the methods below.
+The package is provided via qdep, as `Skycoder42/CryptoQQ`. To use it simply:
+
+1. Install and enable qdep (See [qdep - Installing](https://github.com/Skycoder42/qdep#installation))
+2. Add the following to your pro file:
+```qmake
+QDEP_DEPENDS += Skycoder42/CryptoQQ
+!load(qdep):error("Failed to load qdep feature! Run 'qdep.py prfgen --qmake $$QMAKE_QMAKE' to create it.")
+```
 
 You will have to install [CryptoPP](https://www.cryptopp.com/) and add the library to your project. In case your working on unix/linux and want to use the CryptoPP provided by your distro, you can use `pkgconfig`:
 
@@ -21,24 +28,3 @@ You will have to install [CryptoPP](https://www.cryptopp.com/) and add the libra
 CONFIG += link_pkgconfig
 PKGCONFIG += libcrypto++ #or however it is called for your distro
 ```
-
-### Via qpmx
-[qpmx](https://github.com/Skycoder42/qpmx) is a frontend for qpm (and other tools) with additional features, and is the preferred way to install packages. To use it:
-
-1. Install qpmx (See [GitHub - Installation](https://github.com/Skycoder42/qpmx#installation))
-2. Install qpm (See [GitHub - Installing](https://github.com/Cutehacks/qpm/blob/master/README.md#installing), for **windows** see below)
-3. In your projects root directory, run `qpmx install de.skycoder42.cryptoqq`
-
-### Via qpm
-
-1. Install qpm (See [GitHub - Installing](https://github.com/Cutehacks/qpm/blob/master/README.md#installing), for **windows** see below)
-2. In your projects root directory, run `qpm install de.skycoder42.cryptoqq`
-3. Include qpm to your project by adding `include(vendor/vendor.pri)` to your `.pro` file
-
-Check their [GitHub - Usage for App Developers](https://github.com/Cutehacks/qpm/blob/master/README.md#usage-for-app-developers) to learn more about qpm.
-
-### Important for Windows users:
-QPM Version *0.10.0* (the one you can download on the website) is currently broken on windows! It's already fixed in master, but not released yet. Until a newer versions gets released, you can download the latest dev build from here:
-
-- https://storage.googleapis.com/www.qpm.io/download/latest/windows_amd64/qpm.exe
-- https://storage.googleapis.com/www.qpm.io/download/latest/windows_386/qpm.exe

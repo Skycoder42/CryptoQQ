@@ -7,7 +7,7 @@
 
 #include <cryptopp/filters.h>
 
-class QIODeviceSink : public CryptoPP::Sink, public CryptoPP::NotCopyable
+class CRYPTO_QQ_EXPORT QIODeviceSink : public CryptoPP::Sink, public CryptoPP::NotCopyable
 {
 public:
 #if CRYPTOPP_VERSION >= 600
@@ -36,7 +36,7 @@ private:
 	QIODevice *_device;
 };
 
-class QByteArraySink : public QIODeviceSink
+class CRYPTO_QQ_EXPORT QByteArraySink : public QIODeviceSink
 {
 public:
 	QByteArraySink();

@@ -7,7 +7,7 @@
 
 #include <cryptopp/filters.h>
 
-class QIODeviceStore : public CryptoPP::Store, private CryptoPP::FilterPutSpaceHelper, public CryptoPP::NotCopyable
+class CRYPTO_QQ_EXPORT QIODeviceStore : public CryptoPP::Store, private CryptoPP::FilterPutSpaceHelper, public CryptoPP::NotCopyable
 {
 public:
 #if CRYPTOPP_VERSION >= 600
@@ -42,7 +42,7 @@ private:
 	bool _waiting;
 };
 
-class QIODeviceSource : public CryptoPP::SourceTemplate<QIODeviceStore>
+class CRYPTO_QQ_EXPORT QIODeviceSource : public CryptoPP::SourceTemplate<QIODeviceStore>
 {
 public:
 	QIODeviceSource(CryptoPP::BufferedTransformation *attachment = nullptr);
@@ -51,7 +51,7 @@ public:
 	QIODevice *device() const;
 };
 
-class QByteArraySource : public QIODeviceSource
+class CRYPTO_QQ_EXPORT QByteArraySource : public QIODeviceSource
 {
 public:
 	QByteArraySource(CryptoPP::BufferedTransformation *attachment = nullptr);
