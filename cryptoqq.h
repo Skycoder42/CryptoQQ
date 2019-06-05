@@ -18,6 +18,11 @@ public:
 	ByteArray &operator=(const ByteArray &other) = default;
 	ByteArray &operator=(ByteArray &&other) noexcept = default;
 
+	ByteArray(const QByteArray &other);
+	ByteArray(QByteArray &&other) noexcept;
+	ByteArray &operator=(const QByteArray &other);
+	ByteArray &operator=(QByteArray &&other) noexcept;
+
 	ByteArray(const char *data, int size = -1);
 	ByteArray(int size, char c);
 	ByteArray(int size, Qt::Initialization);

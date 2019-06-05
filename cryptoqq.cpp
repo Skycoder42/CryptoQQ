@@ -2,6 +2,26 @@
 using namespace CryptoPP;
 using namespace CryptoQQ;
 
+ByteArray::ByteArray(const QByteArray &other) :
+	ByteArray{other}
+{}
+
+ByteArray::ByteArray(QByteArray &&other) noexcept :
+	ByteArray{std::move(other)}
+{}
+
+ByteArray &ByteArray::operator=(const QByteArray &other)
+{
+	QByteArray::operator=(other);
+	return *this;
+}
+
+ByteArray &ByteArray::operator=(QByteArray &&other) noexcept
+{
+	QByteArray::operator=(std::move(other));
+	return *this;
+}
+
 ByteArray::ByteArray(const char *data, int size) :
 	QByteArray{data, size}
 {}
