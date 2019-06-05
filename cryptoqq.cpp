@@ -3,11 +3,11 @@ using namespace CryptoPP;
 using namespace CryptoQQ;
 
 ByteArray::ByteArray(const QByteArray &other) :
-	ByteArray{other}
+	QByteArray{other}
 {}
 
 ByteArray::ByteArray(QByteArray &&other) noexcept :
-	ByteArray{std::move(other)}
+	QByteArray{std::move(other)}
 {}
 
 ByteArray &ByteArray::operator=(const QByteArray &other)
