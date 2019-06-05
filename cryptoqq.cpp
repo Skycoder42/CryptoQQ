@@ -2,8 +2,28 @@
 using namespace CryptoPP;
 using namespace CryptoQQ;
 
+ByteArray::ByteArray(const char *data, int size) :
+	QByteArray{data, size}
+{}
+
+ByteArray::ByteArray(int size, char c) :
+	QByteArray{size, c}
+{}
+
+ByteArray::ByteArray(int size, Qt::Initialization i) :
+	QByteArray{size, i}
+{}
+
 ByteArray::ByteArray(const byte *data, size_t size) :
 	QByteArray{reinterpret_cast<const char*>(data), static_cast<int>(size)}
+{}
+
+ByteArray::ByteArray(size_t size, CryptoPP::byte b) :
+	QByteArray{static_cast<int>(size), static_cast<char>(b)}
+{}
+
+ByteArray::ByteArray(size_t size, Qt::Initialization i) :
+	QByteArray{static_cast<int>(size), i}
 {}
 
 ByteArray ByteArray::fromRawByteData(const byte *data, size_t size)

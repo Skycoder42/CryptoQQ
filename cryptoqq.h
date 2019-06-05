@@ -17,14 +17,16 @@ public:
 	ByteArray(ByteArray &&other) noexcept = default;
 	ByteArray &operator=(const ByteArray &other) = default;
 	ByteArray &operator=(ByteArray &&other) noexcept = default;
+
+	ByteArray(const char *data, int size = -1);
+	ByteArray(int size, char c);
+	ByteArray(int size, Qt::Initialization);
+
 	ByteArray(const CryptoPP::byte *data, size_t size);
+	ByteArray(size_t size, CryptoPP::byte b);
+	ByteArray(size_t size, Qt::Initialization);
 
 	static ByteArray fromRawByteData(const CryptoPP::byte *data, size_t size);
-
-	template <typename... TArgs>
-	ByteArray(TArgs&&... args) :
-		QByteArray{std::forward<TArgs>(args)...}
-	{}
 
 	CryptoPP::byte *byteData();
 	const CryptoPP::byte *byteData() const;
