@@ -1,8 +1,10 @@
 HEADERS += \
+	$$PWD/cryptoqq.h \
 	$$PWD/qiodevicesource.h \
 	$$PWD/qiodevicesink.h
 
 SOURCES += \
+	$$PWD/cryptoqq.cpp \
 	$$PWD/qiodevicesource.cpp \
 	$$PWD/qiodevicesink.cpp
 

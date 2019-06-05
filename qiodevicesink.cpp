@@ -1,5 +1,6 @@
 #include "qiodevicesink.h"
 using namespace CryptoPP;
+using namespace CryptoQQ;
 
 #ifdef max
 #undef max

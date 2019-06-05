@@ -1,5 +1,6 @@
 #include "qiodevicesource.h"
 using namespace CryptoPP;
+using namespace CryptoQQ;
 
 const char * const QIODeviceStore::DeviceParameter = "QIODevice";
 

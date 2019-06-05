@@ -7,6 +7,8 @@
 
 #include <cryptopp/filters.h>
 
+namespace CryptoQQ {
+
 class CRYPTO_QQ_EXPORT QIODeviceSink : public CryptoPP::Sink, public CryptoPP::NotCopyable
 {
 public:
@@ -47,5 +49,7 @@ public:
 private:
 	QBuffer _buffer;
 };
+
+}
 
 #endif // QIODEVICESINK_H

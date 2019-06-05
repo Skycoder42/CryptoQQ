@@ -7,6 +7,8 @@
 
 #include <cryptopp/filters.h>
 
+namespace CryptoQQ {
+
 class CRYPTO_QQ_EXPORT QIODeviceStore : public CryptoPP::Store, private CryptoPP::FilterPutSpaceHelper, public CryptoPP::NotCopyable
 {
 public:
@@ -62,5 +64,7 @@ public:
 private:
 	QBuffer _buffer;
 };
+
+}
 
 #endif // QIODEVICESOURCE_H
